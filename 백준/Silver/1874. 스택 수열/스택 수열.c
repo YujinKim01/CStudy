@@ -14,21 +14,14 @@ void pop() {
 }
 
 int main() {
-    int n;
-    scanf("%d", &n);
-
-    int sequence[MAX];
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &sequence[i]);
-    }
-
-    int curr = 1;
-    int index = 0;
+    int n, target, curr = 1;
     char result[MAX * 2];
     int resultindex = 0;
 
+    scanf("%d", &n);
+
     for (int i = 0; i < n; i++) {
-        int target = sequence[i];
+        scanf("%d", &target);
 
         while (curr <= target) {
             push(curr++);
