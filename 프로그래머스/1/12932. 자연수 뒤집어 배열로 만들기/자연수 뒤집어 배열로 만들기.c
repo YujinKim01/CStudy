@@ -3,12 +3,14 @@
 #include <stdlib.h>
 
 int* solution(long long n) {
-    int* answer = (int*)malloc(sizeof(int) * 11);
-    int temp = 0;
-    while(n > 0)
-    {
-        answer[temp++] = n % 10;
+    int* answer = (int*)malloc(sizeof(int)*12);
+    int i=0;
+    
+    while(n>0){
+        answer[i++] = n%10;
         n /= 10;
     }
+    
     return answer;
+    free(answer);
 }
